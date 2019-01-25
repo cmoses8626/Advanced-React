@@ -1,0 +1,11 @@
+"""This is the public-facing API we use to interact with our db using Javascript"""
+
+# import * from './generated/prisma.graphql'
+
+type Query {
+  items: [Item]!
+}
+
+type Mutation {
+  createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
+}
